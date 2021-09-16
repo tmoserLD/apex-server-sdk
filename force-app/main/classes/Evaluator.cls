@@ -64,7 +64,17 @@ public class Evaluator {
         List<Event.Feature> eventsOut,
         Boolean             includeReasonInEvents
     ) {
-        if (!flag.isOn()) {
+        // Flag is off for normal execution OR
+        // Test Class running and Flag set to off
+        if ((
+                !flag.isOn() &&
+                !Test.isRunningTest()
+            ) ||
+            (
+                Test.isRunningTest() &&
+                !LDTestHelper.getFlagEval(flag.getKey())
+            )
+        ) {
             return getOffValue(flag, EvaluationReason.off());
         }
 

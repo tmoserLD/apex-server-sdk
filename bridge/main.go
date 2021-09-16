@@ -24,9 +24,9 @@ import (
 )
 
 const (
-	LD_BASE_URI   = "https://sdk.launchdarkly.com"
-	LD_EVENTS_URI = "https://events.launchdarkly.com"
-	OAUTH_URI     = "https://login.salesforce.com/services/oauth2/token"
+	LD_BASE_URI   = "https://sdk.ld.catamorphic.com"
+	LD_EVENTS_URI = "https://events.ld.catamorphic.com"
+	OAUTH_URI     = "https://test.salesforce.com/services/oauth2/token"
 	POLL_INTERVAL = 30 * time.Second
 	SDK_VERSION   = "1.1.0"
 	USER_AGENT    = "ApexServerClient/" + SDK_VERSION
